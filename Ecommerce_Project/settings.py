@@ -125,19 +125,18 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIR = [STATIC_DIR,]
-STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Media files
 
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
-
 LOGIN_URL = '/account/login/'
 
+django_heroku.settings(locals())
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-django_heroku.settings(locals())
